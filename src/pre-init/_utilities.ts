@@ -1,7 +1,7 @@
-import type { OptionalToRequired } from '../types'
+import type { OptionalsToRequired } from '../types'
 import type { CreateSettingsParams } from './createSettings'
 
-export const defaultCreateSettingsParams: OptionalToRequired<CreateSettingsParams> = {
+export const defaultCreateSettingsParams: OptionalsToRequired<CreateSettingsParams> = {
 	startMessage:
 		'Hemos detectado que es la primera vez que inicias el CLI.\n' +
 		'Por lo que deberas completar las siguientes solicitudes\n' +
