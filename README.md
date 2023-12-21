@@ -34,7 +34,13 @@
     Summary
 </h2>
 <p>
-    The objective of this project is to make the life of the developers of <a href="https://arma3clanfcla.wixsite.com/fcla" target="_blank">FCLA community<a> easier, when they have to create a mission, in order to reduce the development time, improving the development experience. It was made with <a href="https://nodejs.org/" target="_blank">Node.js<a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript<a>, and other <a href="./package.json" target="_blank">npm packages<a> to perform the interaction with user console. If want to know about the project features, check out the <a href="#----available-features">available features</a> section.
+    The objective of this project is to make the life of the developers of <a href="https://arma3clanfcla.wixsite.com/fcla" target="_blank">FCLA community<a> easier, when they have to create a mission. Successfully reducing the time spent and improving the developer experience.
+</p>
+<p>
+    This project was developed using <a href="https://nodejs.org/" target="_blank">Node.js<a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript<a>, and other <a href="./package.json" target="_blank">npm packages<a> to interact with user console properly.
+</p>
+<p>
+    If want to know about the project features, check out the <a href="#----available-features">available features</a> section.
 </p>
 
 <h2>
