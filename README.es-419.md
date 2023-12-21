@@ -52,7 +52,7 @@
     <li>¡Eso es todo! Ahora puedes ejecutar el comando <code>fcla</code> en tu consola para comenzar a utilizar FCLA CLI</li>
 </ol>
 
-> **Note:** el comando `fcla` solo funciona en directorios donde se encuentre un archivo `mission.sqm`.
+> **Nota:** el comando `fcla` solo funciona en directorios donde se encuentre un archivo `mission.sqm`.
 
 <h2>
     Funciones disponibles

@@ -49,10 +49,10 @@
 <ol>
     <li>Install the latest version of <a href="https://nodejs.org/" target="_blank">Node.js<a></li>
     <li>Run <code>npm install -g fcla-cli@latest</code> command in your console to install the CLI. If you don't have an appropriate console yet, I will recommend you <a href="https://cmder.app/" target="_blank">cmder<a></li>
-    <li>That's all, now you can run <code>fcla</code> command in your console to initialize FCLA CLI</li>
+    <li>That's all! Now you can run <code>fcla</code> command in your console to start using FCLA CLI</li>
 </ol>
 
-> **Note:** `fcla` command only works in a directory where a `mission.sqm` file is located.
+> **Note:** `fcla` command only works in directories where a `mission.sqm` file is located.
 
 <h2>
     Available Features
