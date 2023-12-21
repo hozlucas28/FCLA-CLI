@@ -9,8 +9,21 @@
 <p align="center">
     <a href="#----summary">Summary</a> •
     <a href="#----installation">Installation</a> •
+    <a href="#----available-features">Available Features</a> •
     <a href="#----license">License</a> •
     <a href="#----contact">Contact</a>
+</p>
+
+<p align="center">
+    <a href="https://www.npmjs.com/package/fcla-cli">
+        <img src="https://badgen.net/static/npm/v1.0.0/blue">
+    </a>
+    <a href="./LICENSE">
+        <img src="https://badgen.net/static/license/AGPLv3/blue">
+    </a>
+    <a href="./README.es-419.md">
+        <img src="https://badgen.net/static/lang/spanish/purple">
+    </a>
 </p>
 
 <p align="center">
@@ -21,15 +34,30 @@
     Summary
 </h2>
 <p>
-    [ TODO ]
+    This CLI was made with <a href="https://nodejs.org/es/" target="_blank">Node.js<a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript<a>, and other npm packages to perform the interaction with the user console. The objective of this project is to make the life of the developers of <a href="https://arma3clanfcla.wixsite.com/fcla" target="_blank">FCLA community<a> easier, when they have to create a mission, in order to reduce the development time, improving the development experience.
 </p>
 
 <h2>
     Installation
 </h2>
-<p>
-    [ TODO ]
-</p>
+<ol>
+    <li>Install the latest version of <a href="https://nodejs.org/es/" target="_blank">Node.js<a></li>
+    <li>Run <code>npm install -g fcla-cli@latest</code> command in your console to install the CLI. If you don't have an appropriate console yet, I will recommend you <a href="https://cmder.app/" target="_blank">cmder<a></li>
+    <li>That's all, now you can run <code>fcla</code> command in your console to initialize FCLA CLI</li>
+</ol>
+
+> **Note:** `fcla` command only works in a directory where a `mission.sqm` file is located.
+
+<h2>
+    Available Features
+</h2>
+<ul>
+    <li>Create a Zeus mission with pre-configured features</li>
+    <li>Create a campaign mission from a saved camping or a new one following FCLA standards</li>
+    <li>Create a training map with all necessary scripts incorporated</li>
+</ul>
+
+> **Note:** each creation includes for the necessary scripts to work properly, and follows coding standards by default.
 
 <h2>
     License
@@ -42,5 +70,5 @@
     Contact
 </h1>
 <p>
-    If you want to contact me, please see my <a href="https://github.com/hozlucas28" target="_blank">socials medias</a> in my GitHub profile.
+    If you want to contact the author, check out his <a href="https://github.com/hozlucas28" target="_blank">GitHub profile</a>.
 </p>
