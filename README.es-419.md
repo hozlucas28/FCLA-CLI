@@ -9,7 +9,7 @@
 <p align="center">
     <a href="#----resumen">Resumen</a> •
     <a href="#----instalación">Instalación</a> •
-    <a href="#----funciones-disponibles">Funciones disponibles</a> •
+    <a href="#----características-disponibles">Características disponibles</a> •
     <a href="#----licencia">Licencia</a> •
     <a href="#----contacto">Contacto</a>
 </p>
@@ -40,8 +40,10 @@
     El proyecto se desarrolló utilizando <a href="https://nodejs.org/" target="_blank">Node.js<a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript<a>, y otros <a href="./package.json" target="_blank">paquetes npm<a> para interactuar adecuadamente con la consola del usuario.
 </p>
 <p>
-    Si desea conocer las funciones del proyecto, consulte la sección de <a href="#----funciones-disponibles">funciones disponibles</a>.
+    Si desea conocer las características del proyecto, consulte la sección de <a href="#----características-disponibles">características disponibles</a>.
 </p>
+
+> **P.D.:** si desea conocer el algoritmo del proyecto eche un vistazo al <a href="./docs/flowchart.png">flowchart</a>.
 
 <h2>
     Instalación
@@ -55,12 +57,13 @@
 > **Nota:** el comando `fcla` solo funciona en directorios donde se encuentre un archivo `mission.sqm`.
 
 <h2>
-    Funciones disponibles
+    Características disponibles
 </h2>
 <ul>
     <li>Crear una misión Zeus con funciones preconfiguradas</li>
     <li>Crear una misión de campaña a partir de una campaña guardada o una nueva</li>
     <li>Crea un mapa de entrenamiento que incorpora todos los scripts necesarios</li>
+    <li>Almacenamiento local de las preferencias del desarrollador y de datos a fines a las características</li>
 </ul>
 
 > **Nota:** cada creación incluye los scripts necesarios para funcionar correctamente y sigue los estándares de desarrollo de FCLA.

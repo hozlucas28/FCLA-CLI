@@ -43,6 +43,8 @@
     If want to know about the project features, check out the <a href="#----available-features">available features</a> section.
 </p>
 
+> **P.D.:** if you want to know the project algorithm, take a look at the <a href="./docs/flowchart.png">flowchart</a>.
+
 <h2>
     Installation
 </h2>
@@ -58,9 +60,10 @@
     Available Features
 </h2>
 <ul>
-    <li>Create a Zeus mission with pre-configured features</li>
+    <li>Create a Zeus mission with pre-configured functions</li>
     <li>Create a campaign mission from a saved campaign or a new one</li>
     <li>Create a training map with all necessary scripts incorporated</li>
+    <li>Local storage of developer preferences and data for specific purposes related to features</li>
 </ul>
 
 > **Note:** each creation includes the necessary scripts to work properly, and follows coding standards of FCLA.
