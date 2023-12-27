@@ -19,7 +19,7 @@ export async function createSettings({
 	endMessage = defaultCreateSettingsParams.endMessage,
 }: CreateSettingsParams): Promise<void> {
 	// Mostrar mensaje de bienvenida
-	text({ message: startMessage, color: 'yellow' })
+	await text({ message: startMessage, color: 'yellow' })
 
 	// Obtener ajustes
 	const author = await getAuthor()
@@ -36,10 +36,10 @@ export async function createSettings({
 
 	const fileCreated = await settingsFileExists()
 	if (!fileCreated) {
-		text({ message: endMessage.fail, color: 'red' })
+		await text({ message: endMessage.fail, color: 'red' })
 		return
 	}
 
 	// Mostrar mensaje de finalización
-	text({ message: endMessage.success, color: 'green' })
+	await text({ message: endMessage.success, color: 'green' })
 }
