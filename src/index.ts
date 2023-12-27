@@ -1,5 +1,6 @@
 //#!/usr/bin/env node
 import { factoryRestore } from './factoryRestore'
+import { getOperation } from './inputs/getOperation.input'
 import { isFirstInit } from './isFirstInit'
 import { isValidDirectory } from './isValidDirectory'
 import { end, intro } from './outputs'
@@ -25,6 +26,12 @@ async function main() {
 			message:
 				'¡Directorio de trabajo inválido!\n\nEjecute el CLI en un directorio\ndonde se encuentre un archivo: mission.sqm.',
 		})
+		await end()
+		return
+	}
+
+	const operation = await getOperation()
+	if (!operation) {
 		await end()
 		return
 	}

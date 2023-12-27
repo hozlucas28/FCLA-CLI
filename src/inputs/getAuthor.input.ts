@@ -7,7 +7,7 @@ import type { Prompts } from './types'
 export async function getAuthor(): Promise<string | undefined> {
 	await lineBreak()
 
-	const { author }: Prompts<'author'> = await prompts({
+	const { author }: Prompts<'author', string> = await prompts({
 		type: 'text',
 		name: 'author',
 		message: 'Autor',
