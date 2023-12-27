@@ -4,7 +4,7 @@ import { text } from '../outputs/text.output'
 import { getSettingsFilePath, saveFolderExists, settingsFileExists } from '../utils'
 import { defaultCreateSettingsParams } from './_utilities'
 import { createSaveFolder } from './createSaveFolder'
-import type { Settings } from './types'
+import type { Settings } from '../types'
 
 export type CreateSettingsParams = {
 	startMessage?: string
