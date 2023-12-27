@@ -1,4 +1,5 @@
 //#!/usr/bin/env node
+import { operationActions } from './actions/operation.action'
 import { factoryRestore } from './factoryRestore'
 import { getOperation } from './inputs/getOperation.input'
 import { isFirstInit } from './isFirstInit'
@@ -36,6 +37,7 @@ async function main() {
 		return
 	}
 
+	await operationActions[operation]()
 	await end()
 }
 
