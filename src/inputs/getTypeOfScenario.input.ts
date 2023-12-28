@@ -1,8 +1,11 @@
 import prompts from 'prompts'
+import { lineBreak } from '../decorators'
 import type { Scenario } from '../types'
 import type { Choices, Prompts } from './types'
 
 export async function getTypeOfScenario(): Promise<Scenario | undefined> {
+	await lineBreak()
+
 	const { scenario }: Prompts<'scenario', Scenario> = await prompts({
 		name: 'scenario',
 		type: 'select',
@@ -25,5 +28,3 @@ export async function getTypeOfScenario(): Promise<Scenario | undefined> {
 
 	return scenario
 }
-
-getTypeOfScenario()
