@@ -1,5 +1,5 @@
 import { factoryRestore } from '../factoryRestore'
-import { text } from '../outputs/text.output'
+import { text } from '../outputs'
 import type { Operation } from '../types'
 
 export const operationActions: Record<Operation, () => Promise<void>> = {

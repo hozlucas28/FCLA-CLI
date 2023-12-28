@@ -1,10 +1,10 @@
 import fs from 'node:fs/promises'
 import { getAuthor } from '../inputs'
-import { text } from '../outputs/text.output'
+import { text } from '../outputs'
+import type { Settings } from '../types'
 import { getSettingsFilePath, saveFolderExists, settingsFileExists } from '../utils'
 import { defaultCreateSettingsParams } from './_utilities'
 import { createSaveFolder } from './createSaveFolder'
-import type { Settings } from '../types'
 
 export type CreateSettingsParams = {
 	startMessage?: string

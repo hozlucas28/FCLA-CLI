@@ -1,11 +1,10 @@
 //#!/usr/bin/env node
-import { operationActions } from './actions/operation.action'
+import { operationActions } from './actions'
 import { factoryRestore } from './factoryRestore'
-import { getOperation } from './inputs/getOperation.input'
+import { getOperation } from './inputs'
 import { isFirstInit } from './isFirstInit'
 import { isValidDirectory } from './isValidDirectory'
-import { end, intro } from './outputs'
-import { text } from './outputs/text.output'
+import { end, intro, text } from './outputs'
 import { createSettings } from './pre-init'
 
 async function main() {
