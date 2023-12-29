@@ -8,11 +8,11 @@ export function validateStr(str: string): ValidationReturn {
 	}
 
 	if (str.length === 0) {
-		invalidReturn.invalidMsg = 'El campo no puede estar vacio.'
+		invalidReturn.invalidMsg = 'El campo no puede estar vacío.'
 		return invalidReturn
 	}
 
-	const invalidChars = str.match(/[^a-zA-Z\d ]/g)
+	const invalidChars = str.match(/[^a-zA-Z,.+\-%#$'°¡!¿?()[\]\d ]/g)
 	if (invalidChars) {
 		const uniqueChars = [...new Set(invalidChars)].join(' ')
 		invalidReturn.invalidMsg = `Los siguientes caracteres no estan permitidos: ${uniqueChars}`
