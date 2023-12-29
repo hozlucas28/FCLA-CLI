@@ -1,3 +1,4 @@
+export { animatedIntro } from './animatedIntro.input'
 export { getAuthor } from './getAuthor.input'
 export { getOperation } from './getOperation.input'
 export { getRespawnDelay } from './getRespawnDelay.input'
