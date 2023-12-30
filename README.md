@@ -10,6 +10,7 @@
     <a href="#----summary">Summary</a> •
     <a href="#----installation">Installation</a> •
     <a href="#----available-features">Available Features</a> •
+    <a href="#----known-issues">Known Issues</a> •
     <a href="#----license">License</a> •
     <a href="#----contact">Contact</a>
 </p>
@@ -49,7 +50,7 @@
     Installation
 </h2>
 <ol>
-    <li>Install the latest version of <a href="https://nodejs.org/" target="_blank">Node.js<a></li>
+    <li>Install the latest version of <a href="https://nodejs.org/" target="_blank">Node.js<a>, and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>.</li>
     <li>Run <code>npm install -g fcla-cli@latest</code> command in your console to install the CLI. If you don't have an appropriate console yet, I will recommend you <a href="https://cmder.app/" target="_blank">cmder<a></li>
     <li>That's all! Now you can run <code>fcla</code> command in your console to start using FCLA CLI</li>
 </ol>
@@ -61,12 +62,20 @@
 </h2>
 <ul>
     <li>Create a Zeus mission with pre-configured functions</li>
-    <li>Create a campaign mission from a saved campaign or a new one</li>
+    <li>Create a campaign mission from a saved campaign or a new one (coming soon)</li>
     <li>Create a training map with all necessary scripts incorporated</li>
     <li>Local storage of developer preferences and data for specific purposes related to features</li>
 </ul>
 
 > **Note:** each creation includes the necessary scripts to work properly, and follows coding standards of FCLA.
+
+<h2>
+    Known Issues
+</h2>
+<ul>
+    <li>The CLI may require to run in your console with administrator privileges to work well.</li>
+    <li>The CLI will fail if the scenario is open in 3DEN (Arma III editor) or if scenario folder is open in <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>.</li>
+</ul>
 
 <h2>
     License
