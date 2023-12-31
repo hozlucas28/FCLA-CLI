@@ -10,6 +10,7 @@
     <a href="#----resumen">Resumen</a> •
     <a href="#----instalación">Instalación</a> •
     <a href="#----características-disponibles">Características disponibles</a> •
+    <a href="#----problemas-conocidos">Problemas conocidos</a> •
     <a href="#----licencia">Licencia</a> •
     <a href="#----contacto">Contacto</a>
 </p>
@@ -49,7 +50,7 @@
     Instalación
 </h2>
 <ol>
-    <li>Instale la última versión de <a href="https://nodejs.org/" target="_blank">Node.js<a></li>
+    <li>Instale la última versión de <a href="https://nodejs.org/" target="_blank">Node.js<a> y <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
     <li>Ejecute el comando <code>npm install -g fcla-cli@latest</code> en su consola para instalar el CLI. Si no tienes una consola adecuada, te recomiendo <a href="https://cmder.app/" target="_blank">cmder<a></li>
     <li>¡Eso es todo! Ahora puedes ejecutar el comando <code>fcla</code> en tu consola para comenzar a utilizar FCLA CLI</li>
 </ol>
@@ -61,12 +62,20 @@
 </h2>
 <ul>
     <li>Crear una misión Zeus con funciones preconfiguradas</li>
-    <li>Crear una misión de campaña a partir de una campaña guardada o una nueva</li>
+    <li>Crear una misión de campaña a partir de una campaña guardada o una nueva (próximamente)</li>
     <li>Crea un mapa de entrenamiento que incorpora todos los scripts necesarios</li>
     <li>Almacenamiento local de las preferencias del desarrollador y de datos a fines a las características</li>
 </ul>
 
 > **Nota:** cada creación incluye los scripts necesarios para funcionar correctamente y sigue los estándares de desarrollo de FCLA.
+
+<h2>
+    Problemas conocidos
+</h2>
+<ul>
+    <li>Es posible que el CLI deba ejecutarse en su consola con privilegios de administrador para funcionar bien</li>
+    <li>El CLI fallará si el escenario está abierto en el 3DEN (editor del Arma III) o si la carpeta del escenario está abierta en <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+</ul>
 
 <h2>
     Licencia
