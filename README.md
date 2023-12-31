@@ -50,7 +50,7 @@
     Installation
 </h2>
 <ol>
-    <li>Install the latest version of <a href="https://nodejs.org/" target="_blank">Node.js<a>, and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>.</li>
+    <li>Install the latest version of <a href="https://nodejs.org/" target="_blank">Node.js<a>, and <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
     <li>Run <code>npm install -g fcla-cli@latest</code> command in your console to install the CLI. If you don't have an appropriate console yet, I will recommend you <a href="https://cmder.app/" target="_blank">cmder<a></li>
     <li>That's all! Now you can run <code>fcla</code> command in your console to start using FCLA CLI</li>
 </ol>
@@ -73,8 +73,8 @@
     Known Issues
 </h2>
 <ul>
-    <li>The CLI may require to run in your console with administrator privileges to work well.</li>
-    <li>The CLI will fail if the scenario is open in 3DEN (Arma III editor) or if scenario folder is open in <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>.</li>
+    <li>The CLI may require to run in your console with administrator privileges to work well</li>
+    <li>The CLI will fail if the scenario is open in 3DEN (Arma III editor) or if scenario folder is open in <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
 </ul>
 
 <h2>
