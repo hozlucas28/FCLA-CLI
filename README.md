@@ -61,8 +61,8 @@
     Available Features
 </h2>
 <ul>
+    <li>Create a campaign mission</li>
     <li>Create a Zeus mission with pre-configured functions</li>
-    <li>Create a campaign mission from a saved campaign or a new one (coming soon)</li>
     <li>Create a training map with all necessary scripts incorporated</li>
     <li>Local storage of developer preferences and data for specific purposes related to features</li>
 </ul>

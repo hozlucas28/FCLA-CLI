@@ -61,8 +61,8 @@
     Características disponibles
 </h2>
 <ul>
+    <li>Crear una misión de campaña</li>
     <li>Crear una misión Zeus con funciones preconfiguradas</li>
-    <li>Crear una misión de campaña a partir de una campaña guardada o una nueva (próximamente)</li>
     <li>Crea un mapa de entrenamiento que incorpora todos los scripts necesarios</li>
     <li>Almacenamiento local de las preferencias del desarrollador y de datos a fines a las características</li>
 </ul>
