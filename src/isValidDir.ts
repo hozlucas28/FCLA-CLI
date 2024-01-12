@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 import { cwd } from 'node:process'
 
-export async function isValidDirectory(): Promise<boolean> {
+export async function isValidDir(): Promise<boolean> {
 	const currentDir = cwd()
 
 	const files = await fs.readdir(currentDir, { withFileTypes: true })
