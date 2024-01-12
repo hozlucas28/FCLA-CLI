@@ -14,5 +14,3 @@ export async function profileGlasses(): Promise<boolean | undefined> {
 
 	return glasses
 }
-
-profileGlasses()
