@@ -17,8 +17,8 @@ export async function getOperation(): Promise<Operation | undefined> {
 				selected: true,
 			},
 			{
-				title: 'Restaurar los ajustes del CLI',
-				value: 'restore-settings',
+				title: 'Restaurar valores de fábrica',
+				value: 'restore-factory-settings',
 			},
 		] as Choices<Operation>,
 	})
