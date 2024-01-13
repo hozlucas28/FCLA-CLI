@@ -1,6 +1,6 @@
 //#!/usr/bin/env node
 import { factoryRestore } from './factoryRestore'
-import { getOperation } from './inputs'
+import { animatedIntro, getOperation, getScenarioDesc, getScenarioName, profileGlasses } from './inputs'
 import { isFirstInit } from './isFirstInit'
 import { isValidDir } from './isValidDir'
 import { end, intro, text } from './outputs'
@@ -35,10 +35,21 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 
 	switch (operation) {
 		case 'configure-scenario':
-			// TODO
+			// Configure scenario
+			const scenarioName = await getScenarioName()
+			if (!scenarioName) end()
+
+			const scenarioDesc = await getScenarioDesc()
+			if (!scenarioDesc) end()
+
+			const showAnimatedIntro = await animatedIntro()
+			if (!showAnimatedIntro) end()
+
+			const allowProfileGlasses = await profileGlasses()
+			if (!allowProfileGlasses) end()
 			break
 
-		default: // "restore-settings"
+		default: // "restore-factory-settings"
 			// Restore settings to factory defaults and restart
 			await factoryRestore()
 			await text({ message: '¡Valores de fábrica restaurados!', color: 'green' })
