@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2023-12-31T17:03:12.692Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="Oy4Xv6ZPZ7DfKhMwA6yf" version="22.1.16" type="device">
+<mxfile host="app.diagrams.net" modified="2024-01-13T23:25:19.690Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="2c8MLHVo1mwadZozFH_k" version="22.1.18" type="device">
   <diagram name="Página-1" id="CiTTVXfBIBbXI56gMmDH">
-    <mxGraphModel dx="7170" dy="3780" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#333333" math="0" shadow="0">
+    <mxGraphModel dx="925" dy="488" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#333333" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="d2PY4S5o6BHK0BxMwNVY-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;curved=0;" edge="1" parent="1" source="0bhFbeApOQJovt4dPdJH-5" target="0bhFbeApOQJovt4dPdJH-9">
+        <mxCell id="d2PY4S5o6BHK0BxMwNVY-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;curved=0;" parent="1" source="0bhFbeApOQJovt4dPdJH-5" target="0bhFbeApOQJovt4dPdJH-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="u2REjSNjAs1CH6g7LEcJ-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;curved=0;" parent="1" source="u2REjSNjAs1CH6g7LEcJ-1" target="u2REjSNjAs1CH6g7LEcJ-37" edge="1">
@@ -204,17 +204,17 @@
         <mxCell id="8wnRQOadAzvCx5RK6HXc-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;curved=0;" parent="1" source="8wnRQOadAzvCx5RK6HXc-1" target="8wnRQOadAzvCx5RK6HXc-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8wnRQOadAzvCx5RK6HXc-1" value="Restore&lt;br&gt;settings" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="887.5" y="942" width="100" height="60" as="geometry" />
+        <mxCell id="8wnRQOadAzvCx5RK6HXc-1" value="Factory reset" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="862.25" y="942" width="150.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="7kLtS60RdI804fuluWtB-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;curved=0;" parent="1" source="8wnRQOadAzvCx5RK6HXc-6" target="7kLtS60RdI804fuluWtB-4" edge="1">
+        <mxCell id="fKltwH5AKrVZ1ibLdWWh-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8wnRQOadAzvCx5RK6HXc-6" target="fKltwH5AKrVZ1ibLdWWh-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8wnRQOadAzvCx5RK6HXc-6" value="• Delete save folder" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;align=center;" parent="1" vertex="1">
           <mxGeometry x="875" y="1073.5" width="125" height="75" as="geometry" />
         </mxCell>
         <mxCell id="7kLtS60RdI804fuluWtB-4" value="Restart" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
-          <mxGeometry x="900" y="1209" width="75" height="75" as="geometry" />
+          <mxGeometry x="900" y="1359.5" width="75" height="75" as="geometry" />
         </mxCell>
         <mxCell id="7kLtS60RdI804fuluWtB-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;curved=0;" parent="1" source="7kLtS60RdI804fuluWtB-6" target="7kLtS60RdI804fuluWtB-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -267,7 +267,7 @@
         <mxCell id="7kLtS60RdI804fuluWtB-34" value="• Add&amp;nbsp;&lt;i style=&quot;border-color: var(--border-color);&quot;&gt;.vscode&lt;/i&gt;&amp;nbsp;folder with pre-defined&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;settings and recommended extensions&lt;br&gt;&lt;br&gt;• Add&amp;nbsp;&lt;i style=&quot;border-color: var(--border-color);&quot;&gt;cba_settings.sqf&amp;nbsp;&lt;/i&gt;file with addon&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;options&lt;br&gt;&lt;br&gt;• Add&amp;nbsp;&lt;i style=&quot;border-color: var(--border-color);&quot;&gt;initPlayerLocal.sqf&amp;nbsp;&lt;/i&gt;file&amp;nbsp;with the script&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;to show a donations message&lt;br&gt;&lt;br&gt;• Add&amp;nbsp;&lt;i style=&quot;border-color: var(--border-color);&quot;&gt;todos.md&amp;nbsp;&lt;/i&gt;file for developer todos&lt;br&gt;&lt;br&gt;• Add&amp;nbsp;&lt;i style=&quot;border-color: var(--border-color);&quot;&gt;tools.md&amp;nbsp;&lt;/i&gt;file which have utility tools&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;for the developer&lt;br&gt;&lt;br&gt;• Create a&amp;nbsp;&lt;i style=&quot;border-color: var(--border-color);&quot;&gt;src&amp;nbsp;&lt;/i&gt;folder with the source code&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;of scripts, static assets, and sounds given&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;the scenario type and user inputs.&lt;br&gt;&lt;br&gt;• Create &lt;i&gt;description.ext&lt;/i&gt;&amp;nbsp;file with given user&lt;br&gt;inputs and scenario type&lt;br&gt;&lt;br&gt;• Create&amp;nbsp;&lt;i style=&quot;border-color: var(--border-color);&quot;&gt;init.sqf&amp;nbsp;&lt;/i&gt;file with animated intro&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;and scripts based on user inputs" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;align=center;" parent="1" vertex="1">
           <mxGeometry x="463" y="3328" width="245" height="375" as="geometry" />
         </mxCell>
-        <mxCell id="d2PY4S5o6BHK0BxMwNVY-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;curved=0;" edge="1" parent="1" source="7kLtS60RdI804fuluWtB-35" target="d2PY4S5o6BHK0BxMwNVY-1">
+        <mxCell id="d2PY4S5o6BHK0BxMwNVY-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;curved=0;" parent="1" source="7kLtS60RdI804fuluWtB-35" target="d2PY4S5o6BHK0BxMwNVY-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="7kLtS60RdI804fuluWtB-35" value="Loadouts" style="html=1;strokeWidth=2;shape=manualInput;whiteSpace=wrap;rounded=1;size=26;arcSize=11;" parent="1" vertex="1">
@@ -395,14 +395,20 @@
         <mxCell id="0bhFbeApOQJovt4dPdJH-45" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;curved=0;" parent="1" source="0bhFbeApOQJovt4dPdJH-39" target="7kLtS60RdI804fuluWtB-31" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d2PY4S5o6BHK0BxMwNVY-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="d2PY4S5o6BHK0BxMwNVY-1" target="7kLtS60RdI804fuluWtB-39">
+        <mxCell id="d2PY4S5o6BHK0BxMwNVY-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="d2PY4S5o6BHK0BxMwNVY-1" target="7kLtS60RdI804fuluWtB-39" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d2PY4S5o6BHK0BxMwNVY-1" value="If the scenario is open in&lt;br&gt;3DEN or if scenario folder is&lt;br&gt;open in Visual Studio Code,&lt;br&gt;closed them." style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="d2PY4S5o6BHK0BxMwNVY-1" value="If the scenario is open in&lt;br&gt;3DEN or if scenario folder is&lt;br&gt;open in Visual Studio Code,&lt;br&gt;closed them." style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="473" y="2897" width="225" height="75" as="geometry" />
         </mxCell>
-        <mxCell id="d2PY4S5o6BHK0BxMwNVY-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;" edge="1" parent="1" source="0bhFbeApOQJovt4dPdJH-32" target="0bhFbeApOQJovt4dPdJH-39">
+        <mxCell id="d2PY4S5o6BHK0BxMwNVY-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;" parent="1" source="0bhFbeApOQJovt4dPdJH-32" target="0bhFbeApOQJovt4dPdJH-39" edge="1">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fKltwH5AKrVZ1ibLdWWh-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fKltwH5AKrVZ1ibLdWWh-1" target="7kLtS60RdI804fuluWtB-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fKltwH5AKrVZ1ibLdWWh-1" value="Factory settings restored!&lt;br&gt;CLI restarted" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="850" y="1216.5" width="175" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
