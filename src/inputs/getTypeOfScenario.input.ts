@@ -12,12 +12,12 @@ export async function getTypeOfScenario(): Promise<Scenario | undefined> {
 		message: 'Seleccione el tipo de escenario:',
 		choices: [
 			{
-				title: 'Misión (zeus)',
-				value: 'zeus-mission',
-			},
-			{
 				title: 'Misión (campaña)',
 				value: 'campaign-mission',
+			},
+			{
+				title: 'Misión (zeus)',
+				value: 'zeus-mission',
 			},
 			{
 				title: 'Mapa de entrenamiento',

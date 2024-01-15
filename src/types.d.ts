@@ -4,4 +4,4 @@ export type Settings = {
 	author: string
 }
 
-export type Scenario = 'zeus-mission' | 'campaign-mission' | 'training-map'
+export type Scenario = 'campaign-mission' | 'zeus-mission' | 'training-map'
