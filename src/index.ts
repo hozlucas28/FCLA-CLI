@@ -1,6 +1,16 @@
 //#!/usr/bin/env node
 import { factoryRestore } from './factoryRestore'
-import { animatedIntro, getOperation, getScenarioDesc, getScenarioName, profileGlasses } from './inputs'
+import {
+	animatedIntro,
+	getEndDesc,
+	getEndTitle,
+	getOperation,
+	getRespawnDelay,
+	getScenarioDesc,
+	getScenarioName,
+	getTypeOfScenario,
+	profileGlasses,
+} from './inputs'
 import { isFirstInit } from './isFirstInit'
 import { isValidDir } from './isValidDir'
 import { end, intro, text } from './outputs'
@@ -47,6 +57,23 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 
 			const allowProfileGlasses = await profileGlasses()
 			if (!allowProfileGlasses) end()
+
+			const scenarioType = await getTypeOfScenario()
+			if (!scenarioType) end()
+
+			// Define specific settings for campaign and zeus missions
+			if (scenarioType === 'campaign-mission' || scenarioType === 'zeus-mission') {
+				const respawnDelay = await getRespawnDelay()
+				if (!respawnDelay) end()
+
+				const endTitle = await getEndTitle()
+				if (!endTitle) end()
+
+				const endDesc = await getEndDesc()
+				if (!endDesc) end()
+			}
+
+			text({ message: '¡Configuración básica finalizada!', color: 'green' })
 			break
 
 		default: // "restore-factory-settings"
@@ -56,6 +83,8 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 			await main('CLI reiniciado...')
 			break
 	}
+
+	end()
 }
 
 main()
