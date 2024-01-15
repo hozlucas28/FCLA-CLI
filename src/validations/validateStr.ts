@@ -12,7 +12,7 @@ export function validateStr(str: string): ValidationReturn {
 		return invalidReturn
 	}
 
-	const invalidChars = str.match(/[^a-zA-Z,.+\-%#$'°¡!¿?()[\]\d ]/g)
+	const invalidChars = str.match(/[^a-zñA-ZÑà-üÀ-Ü,.+\-%#$'°¡!¿?()[\]\d ]/g)
 	if (invalidChars) {
 		const uniqueChars = [...new Set(invalidChars)].join(' ')
 		invalidReturn.invalidMsg = `Los siguientes caracteres no estan permitidos: ${uniqueChars}`
