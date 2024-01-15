@@ -26,6 +26,7 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 		// Set configuration and exit
 		await createSettings({})
 		await end()
+		return
 	}
 
 	// Check if the working directory is valid
@@ -37,40 +38,68 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 				'¡Directorio de trabajo inválido!\n\nEjecute el CLI en un directorio\ndonde se encuentre un archivo: mission.sqm.',
 		})
 		await end()
+		return
 	}
 
 	// Select an operation
 	const operation = await getOperation()
-	if (!operation) end()
+	if (!operation) {
+		end()
+		return
+	}
 
 	switch (operation) {
 		case 'configure-scenario':
 			// Configure scenario
 			const scenarioName = await getScenarioName()
-			if (!scenarioName) end()
+			if (!scenarioName) {
+				end()
+				return
+			}
 
 			const scenarioDesc = await getScenarioDesc()
-			if (!scenarioDesc) end()
+			if (!scenarioDesc) {
+				end()
+				return
+			}
 
 			const showAnimatedIntro = await animatedIntro()
-			if (!showAnimatedIntro) end()
+			if (!showAnimatedIntro) {
+				end()
+				return
+			}
 
 			const allowProfileGlasses = await profileGlasses()
-			if (!allowProfileGlasses) end()
+			if (!allowProfileGlasses) {
+				end()
+				return
+			}
 
 			const scenarioType = await getTypeOfScenario()
-			if (!scenarioType) end()
+			if (!scenarioType) {
+				end()
+				return
+			}
 
 			// Define specific settings for campaign and zeus missions
 			if (scenarioType === 'campaign-mission' || scenarioType === 'zeus-mission') {
 				const respawnDelay = await getRespawnDelay()
-				if (!respawnDelay) end()
+				if (!respawnDelay) {
+					end()
+					return
+				}
 
 				const endTitle = await getEndTitle()
-				if (!endTitle) end()
+				if (!endTitle) {
+					end()
+					return
+				}
 
 				const endDesc = await getEndDesc()
-				if (!endDesc) end()
+				if (!endDesc) {
+					end()
+					return
+				}
 			}
 
 			text({ message: '¡Configuración básica finalizada!', color: 'green' })
