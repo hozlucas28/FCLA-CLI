@@ -44,7 +44,8 @@
 		"link:cli": "clear && pnpm unlink --global && pnpm link --global",
 		"prepare": "husky install",
 		"start": "clear && tsc && node --env-file=.env.local ./dist/index.js",
-		"test": "jest"
+		"test": "clear && jest",
+		"test:unit": "clear && jest --testPathPattern='/src/__tests__/unit/.*\\.spec\\.ts$'"
 	},
 	"version": "1.0.0",
 	"dependencies": {
