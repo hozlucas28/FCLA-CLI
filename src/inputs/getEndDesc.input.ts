@@ -11,7 +11,7 @@ export async function getEndDesc(): Promise<string | undefined> {
 		type: 'text',
 		name: 'description',
 		message: 'Descripción de fin de escenario',
-		format: (str: string) => formatStr({ str, capitalize: false }),
+		format: (str: string) => formatStr({ str }),
 		validate: (str: string) => validateInput(str),
 	})
 

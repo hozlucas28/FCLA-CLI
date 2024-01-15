@@ -11,7 +11,7 @@ export async function getAuthor(): Promise<string | undefined> {
 		type: 'text',
 		name: 'author',
 		message: 'Autor',
-		format: (str: string) => formatStr({ str, capitalize: false }),
+		format: (str: string) => formatStr({ str }),
 		validate: (str: string) => validateInput(str),
 	})
 

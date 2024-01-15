@@ -11,7 +11,7 @@ export async function getEndTitle(): Promise<string | undefined> {
 		type: 'text',
 		name: 'title',
 		message: 'Título de fin de escenario',
-		format: (str: string) => formatStr({ str, capitalize: false }),
+		format: (str: string) => formatStr({ str }),
 		validate: (str: string) => validateInput(str),
 	})
 

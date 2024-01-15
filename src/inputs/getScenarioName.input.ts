@@ -11,7 +11,7 @@ export async function getScenarioName(): Promise<string | undefined> {
 		name: 'scenario',
 		type: 'text',
 		message: 'Ingrese el nombre del escenario:',
-		format: (str: string) => formatStr({ str, capitalize: false }),
+		format: (str: string) => formatStr({ str }),
 		validate: (str: string) => validateInput(str),
 	})
 

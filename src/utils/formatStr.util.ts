@@ -5,7 +5,7 @@ type Params = {
 	capitalize?: boolean
 }
 
-export function formatStr({ str, capitalize = true }: Params): string {
+export function formatStr({ str, capitalize = false }: Params): string {
 	let formattedStr = str.trim().replace(/\s\s+/g, ' ')
 	formattedStr = capitalize ? capitalizeStr(formattedStr) : formattedStr
 

@@ -11,7 +11,7 @@ export async function getScenarioDesc(): Promise<string | undefined> {
 		name: 'description',
 		type: 'text',
 		message: 'Ingrese la descripción del escenario:',
-		format: (str: string) => formatStr({ str, capitalize: false }),
+		format: (str: string) => formatStr({ str }),
 		validate: (str: string) => validateInput(str),
 	})
 
