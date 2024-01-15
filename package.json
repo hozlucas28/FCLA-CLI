@@ -6,6 +6,10 @@
 	"bugs": {
 		"url": "https://github.com/hozlucas28/FCLA-CLI/issues"
 	},
+	"dependencies": {
+		"picocolors": "^1.0.0",
+		"prompts": "^2.4.2"
+	},
 	"description": "Repository of a CLI for FCLA community",
 	"devDependencies": {
 		"@types/jest": "^29.5.11",
@@ -47,9 +51,5 @@
 		"test": "clear && jest",
 		"test:unit": "clear && jest --testPathPattern='/src/__tests__/unit/.*\\.spec\\.ts$'"
 	},
-	"version": "1.0.0",
-	"dependencies": {
-		"picocolors": "^1.0.0",
-		"prompts": "^2.4.2"
-	}
+	"version": "1.0.0"
 }
