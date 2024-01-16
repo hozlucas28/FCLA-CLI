@@ -4,6 +4,7 @@ import {
 	animatedIntro,
 	getEndDesc,
 	getEndTitle,
+	getLoadouts,
 	getOperation,
 	getRespawnDelay,
 	getScenarioDesc,
@@ -50,7 +51,7 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 
 	switch (operation) {
 		case 'configure-scenario':
-			// Configure scenario
+			// Configure basic scenario
 			const scenarioName = await getScenarioName()
 			if (!scenarioName) {
 				end()
@@ -103,6 +104,13 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 			}
 
 			text({ message: '¡Configuración básica finalizada!', color: 'green' })
+
+			// Select loadouts
+			const loadouts = await getLoadouts()
+			if (!loadouts) {
+				end()
+				return
+			}
 			break
 
 		default: // "restore-factory-settings"
