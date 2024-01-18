@@ -45,7 +45,7 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 	// Select an operation
 	const operation = await getOperation()
 	if (!operation) {
-		end()
+		await end()
 		return
 	}
 
@@ -54,31 +54,31 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 			// Configure basic scenario
 			const scenarioName = await getScenarioName()
 			if (!scenarioName) {
-				end()
+				await end()
 				return
 			}
 
 			const scenarioDesc = await getScenarioDesc()
 			if (!scenarioDesc) {
-				end()
+				await end()
 				return
 			}
 
 			const showAnimatedIntro = await animatedIntro()
 			if (typeof showAnimatedIntro !== 'boolean') {
-				end()
+				await end()
 				return
 			}
 
 			const allowProfileGlasses = await profileGlasses()
 			if (typeof allowProfileGlasses !== 'boolean') {
-				end()
+				await end()
 				return
 			}
 
 			const scenarioType = await getTypeOfScenario()
 			if (!scenarioType) {
-				end()
+				await end()
 				return
 			}
 
@@ -86,31 +86,40 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 			if (scenarioType === 'campaign-mission' || scenarioType === 'zeus-mission') {
 				const respawnDelay = await getRespawnDelay()
 				if (!respawnDelay) {
-					end()
+					await end()
 					return
 				}
 
 				const endTitle = await getEndTitle()
 				if (!endTitle) {
-					end()
+					await end()
 					return
 				}
 
 				const endDesc = await getEndDesc()
 				if (!endDesc) {
-					end()
+					await end()
 					return
 				}
 			}
 
-			text({ message: '¡Configuración básica finalizada!', color: 'green' })
+			await text({ message: '¡Configuración básica finalizada!', color: 'green' })
 
 			// Select loadouts
 			const loadouts = await getLoadouts()
 			if (!loadouts) {
-				end()
+				await end()
 				return
 			}
+
+			await text({
+				icon: '[i]',
+				message:
+					'Si el escenario está abierto en el 3DEN (editor de Arma III), salga de él.\nAdemás, si la carpeta del mismo está abierta en Visual Studio Code,\ncierre la aplicación.',
+				color: 'yellow',
+			})
+
+			// TODO: Confirm that the user closed the 3DEN and VSCode
 			break
 
 		default: // "restore-factory-settings"
@@ -121,7 +130,7 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 			break
 	}
 
-	end()
+	await end()
 }
 
 main()
