@@ -1,4 +1,4 @@
-export type Choices<T extends number | string> = {
+export type Choices<T extends boolean | number | string> = {
 	title: string
 	value: T
 	disabled?: boolean
