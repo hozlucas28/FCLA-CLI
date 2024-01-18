@@ -65,13 +65,13 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 			}
 
 			const showAnimatedIntro = await animatedIntro()
-			if (!showAnimatedIntro) {
+			if (typeof showAnimatedIntro !== 'boolean') {
 				end()
 				return
 			}
 
 			const allowProfileGlasses = await profileGlasses()
-			if (!allowProfileGlasses) {
+			if (typeof allowProfileGlasses !== 'boolean') {
 				end()
 				return
 			}
