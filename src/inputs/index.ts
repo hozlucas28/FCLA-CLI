@@ -1,4 +1,5 @@
 export { animatedIntro } from './animatedIntro.input'
+export { confirm } from './confirm.input'
 export { getAuthor } from './getAuthor.input'
 export { getEndDesc } from './getEndDesc.input'
 export { getEndTitle } from './getEndTitle.input'
