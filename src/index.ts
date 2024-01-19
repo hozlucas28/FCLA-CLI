@@ -2,6 +2,7 @@
 import { factoryRestore } from './factoryRestore'
 import {
 	animatedIntro,
+	confirm,
 	getEndDesc,
 	getEndTitle,
 	getLoadouts,
@@ -19,7 +20,7 @@ import { createSettings } from './pre-init'
 
 async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 	// Start
-	if (process.env.FACTORY_RESTORE) await factoryRestore()
+	if (process.env.FACTORY_RESTORE === 'true') await factoryRestore()
 	intro(introMsg)
 
 	// Check if the CLI is running for the first time
@@ -31,7 +32,7 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 	}
 
 	// Check if the working directory is valid
-	if (!(await isValidDir())) {
+	if (process.env.BYPASS_DIRECTORY_VALIDATION !== 'true' && !(await isValidDir())) {
 		// Exit
 		await text({
 			color: 'red',
@@ -115,11 +116,21 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 			await text({
 				icon: '[i]',
 				message:
-					'Si el escenario está abierto en el 3DEN (editor de Arma III), salga de él.\nAdemás, si la carpeta del mismo está abierta en Visual Studio Code,\ncierre la aplicación.',
+					'Si el escenario está abierto en el 3DEN (editor de Arma III), salga de él.\nAdemás, si la carpeta del mismo está abierta en Visual Studio Code (VSCode),\ncierre la aplicación.',
 				color: 'yellow',
 			})
 
-			// TODO: Confirm that the user closed the 3DEN and VSCode
+			const shouldContinue = await confirm({
+				cancelMsgChoice: 'No',
+				confirmMsgChoice: 'Si',
+				defaultChoice: 'cancel',
+				msg: '¿Has salido del escenario y cerrado la carpeta correspondiente en VSCode?',
+			})
+
+			if (!shouldContinue) {
+				await end()
+				return
+			}
 			break
 
 		default: // "restore-factory-settings"
