@@ -3,28 +3,28 @@ import { lineBreak } from '../decorators'
 import type { Choices, Prompts } from './types'
 
 type Params = {
-	cancelMsgChoice: string
-	confirmMsgChoice: string
+	cancelMessageChoice: string
+	confirmMessageChoice: string
 	defaultChoice: 'confirm' | 'cancel'
-	msg: string
+	message: string
 }
 
 export async function confirm({
-	cancelMsgChoice,
-	confirmMsgChoice,
+	cancelMessageChoice,
+	confirmMessageChoice,
 	defaultChoice,
-	msg,
+	message,
 }: Params): Promise<boolean | undefined> {
 	await lineBreak()
 
 	const choices: Choices<true | false> = [
 		{
-			title: confirmMsgChoice,
+			title: confirmMessageChoice,
 			value: true,
 			selected: defaultChoice === 'confirm',
 		},
 		{
-			title: cancelMsgChoice,
+			title: cancelMessageChoice,
 			value: false,
 			selected: defaultChoice === 'cancel',
 		},
@@ -32,7 +32,7 @@ export async function confirm({
 
 	const { confirm }: Prompts<'confirm', true | false> = await prompts({
 		choices,
-		message: msg,
+		message: message,
 		name: 'confirm',
 		type: 'select',
 	})
