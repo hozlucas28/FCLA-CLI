@@ -117,17 +117,42 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 				icon: '[i]',
 				message:
 					'Si el escenario está abierto en el 3DEN (editor de Arma III), salga de él.\nAdemás, si la carpeta del mismo está abierta en Visual Studio Code (VSCode),\ncierre la aplicación.',
-				color: 'yellow',
+				color: 'cyan',
 			})
 
+			// Create documents, CLI log, rename scenario folder, and open scenario folder in VSCode.
 			const shouldContinue = await confirm({
-				cancelMsgChoice: 'No',
-				confirmMsgChoice: 'Si',
+				cancelMessageChoice: 'No',
+				confirmMessageChoice: 'Si',
 				defaultChoice: 'cancel',
-				msg: '¿Has salido del escenario y cerrado la carpeta correspondiente en VSCode?',
+				message: '¿Has salido del escenario y cerrado la carpeta correspondiente en VSCode?',
+			})
+			if (!shouldContinue) {
+				await end()
+				return
+			}
+
+			// TODO: Create documents, CLI log, rename scenario folder, and open scenario folder in VSCode.
+			/* Intructions... */
+
+			await text({ message: '¡Escenario configurado!', color: 'green' })
+
+			// Manual steps to make a complete scenario configuration
+			await text({
+				icon: '[i]',
+				message:
+					'Para llevar a cabo una configuración completa del escenario,\nsigue los pasos que se indican a continuación...',
+				color: 'cyan',
 			})
 
-			if (!shouldContinue) {
+			const temp = await confirm({
+				message: '1° - Abre el escenario en el 3DEN (editor de Arma III)',
+				cancelMessageChoice: 'Postergar',
+				confirmMessageChoice: 'Escenario abierto',
+				defaultChoice: 'cancel',
+			})
+			if (!temp) {
+				// TODO: Add remaining steps to todos.md file
 				await end()
 				return
 			}
