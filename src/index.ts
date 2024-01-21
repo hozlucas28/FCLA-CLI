@@ -145,13 +145,37 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 				color: 'cyan',
 			})
 
-			const temp = await confirm({
+			const scenarioOpenIn3DEN = await confirm({
 				message: '1° - Abre el escenario en el 3DEN (editor de Arma III)',
 				cancelMessageChoice: 'Postergar',
 				confirmMessageChoice: 'Escenario abierto',
 				defaultChoice: 'cancel',
 			})
-			if (!temp) {
+			if (!scenarioOpenIn3DEN) {
+				// TODO: Add remaining steps to todos.md file
+				await end()
+				return
+			}
+
+			const addonsSettingsCopied = await confirm({
+				message: '2° - Copia el contenido del archivo "cba_settings.sqf"',
+				cancelMessageChoice: 'Postergar',
+				confirmMessageChoice: 'Contenido copiado',
+				defaultChoice: 'cancel',
+			})
+			if (!addonsSettingsCopied) {
+				// TODO: Add remaining steps to todos.md file
+				await end()
+				return
+			}
+
+			const addonsSettingsImported = await confirm({
+				message: '3° - Importa el contenido a los addons options (servidor)',
+				cancelMessageChoice: 'Postergar',
+				confirmMessageChoice: 'Ajustes importados',
+				defaultChoice: 'cancel',
+			})
+			if (!addonsSettingsImported) {
 				// TODO: Add remaining steps to todos.md file
 				await end()
 				return
