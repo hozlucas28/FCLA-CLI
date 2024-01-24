@@ -7,6 +7,7 @@ import {
 	getEndTitle,
 	getLoadouts,
 	getOperation,
+	getOptionalManualSteps,
 	getRespawnDelay,
 	getScenarioDesc,
 	getScenarioName,
@@ -66,13 +67,13 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 			}
 
 			const showAnimatedIntro = await animatedIntro()
-			if (typeof showAnimatedIntro !== 'boolean') {
+			if (showAnimatedIntro === undefined) {
 				await end()
 				return
 			}
 
 			const allowProfileGlasses = await profileGlasses()
-			if (typeof allowProfileGlasses !== 'boolean') {
+			if (allowProfileGlasses === undefined) {
 				await end()
 				return
 			}
@@ -114,10 +115,9 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 			}
 
 			await text({
-				icon: '[i]',
 				message:
 					'Si el escenario está abierto en el 3DEN (editor de Arma III), salga de él.\nAdemás, si la carpeta del mismo está abierta en Visual Studio Code (VSCode),\ncierre la aplicación.',
-				color: 'cyan',
+				color: 'magenta',
 			})
 
 			// Create documents, CLI log, rename scenario folder, and open scenario folder in VSCode.
@@ -133,53 +133,35 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 			}
 
 			// TODO: Create documents, CLI log, rename scenario folder, and open scenario folder in VSCode.
-			/* Intructions... */
+			/* Instructions... */
 
 			await text({ message: '¡Escenario configurado!', color: 'green' })
 
-			// Manual steps to make a complete scenario configuration
+			// Manual optional steps to make a complete scenario configuration
 			await text({
-				icon: '[i]',
 				message:
-					'Para llevar a cabo una configuración completa del escenario,\nsigue los pasos que se indican a continuación...',
-				color: 'cyan',
+					'Para llevar a cabo una configuración completa del escenario,\nsigue los pasos opcionales que se indican a continuación...',
+				color: 'magenta',
 			})
 
-			const scenarioOpenIn3DEN = await confirm({
-				message: '1° - Abre el escenario en el 3DEN (editor de Arma III)',
-				cancelMessageChoice: 'Postergar',
-				confirmMessageChoice: 'Escenario abierto',
-				defaultChoice: 'cancel',
-			})
-			if (!scenarioOpenIn3DEN) {
-				// TODO: Add remaining steps to todos.md file
+			const optionalManualSteps = await getOptionalManualSteps()
+			if (optionalManualSteps.inputCancelled) {
 				await end()
 				return
 			}
 
-			const addonsSettingsCopied = await confirm({
-				message: '2° - Copia el contenido del archivo "cba_settings.sqf"',
-				cancelMessageChoice: 'Postergar',
-				confirmMessageChoice: 'Contenido copiado',
-				defaultChoice: 'cancel',
-			})
-			if (!addonsSettingsCopied) {
-				// TODO: Add remaining steps to todos.md file
-				await end()
-				return
-			}
+			// TODO: Add remaining optional steps to todos.md file
 
-			const addonsSettingsImported = await confirm({
-				message: '3° - Importa el contenido a los addons options (servidor)',
-				cancelMessageChoice: 'Postergar',
-				confirmMessageChoice: 'Ajustes importados',
-				defaultChoice: 'cancel',
+			await text({
+				message: '¡Escenario configurado exitosamente!',
+				color: 'green',
 			})
-			if (!addonsSettingsImported) {
-				// TODO: Add remaining steps to todos.md file
-				await end()
-				return
-			}
+
+			await text({
+				message:
+					'Consulte las tareas pendientes dentro del archivo todos.md y recuerde\nutilizar las composiciones de la comunidad para mejorar su productividad.',
+				color: 'yellow',
+			})
 			break
 
 		default: // "restore-factory-settings"
