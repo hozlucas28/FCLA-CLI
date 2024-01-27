@@ -27,7 +27,7 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 	// Check if the CLI is running for the first time
 	if (await isFirstInit()) {
 		// Set configuration and exit
-		await createSettings({})
+		await createSettings()
 		await end()
 		return
 	}
@@ -160,7 +160,7 @@ async function main(introMsg = '¡Bienvenido al CLI de FCLA!') {
 			await text({
 				message:
 					'Consulte las tareas pendientes dentro del archivo todos.md y recuerde\nutilizar las composiciones de la comunidad para mejorar su productividad.',
-				color: 'yellow',
+				color: 'magenta',
 			})
 			break
 

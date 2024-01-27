@@ -3,31 +3,25 @@ import { getAuthor } from '../inputs'
 import { text } from '../outputs'
 import type { Settings } from '../types'
 import { getSettingsFilePath, saveFolderExists, settingsFileExists } from '../utils'
-import { defaultCreateSettingsParams } from './_utilities'
 import { createSaveFolder } from './createSaveFolder'
 
-export type CreateSettingsParams = {
-	startMessage?: string
-	endMessage?: {
-		fail: string
-		success: string
-	}
-}
+export async function createSettings(): Promise<void> {
+	// Welcome message
+	await text({
+		message:
+			'Hemos detectado que es la primera vez que inicias el CLI.\n' +
+			'Por lo que deberás completar las siguientes solicitudes\n' +
+			'para crear tu propio archivo de ajustes.',
+		color: 'magenta',
+	})
 
-export async function createSettings({
-	startMessage = defaultCreateSettingsParams.startMessage,
-	endMessage = defaultCreateSettingsParams.endMessage,
-}: CreateSettingsParams): Promise<void> {
-	// Mostrar mensaje de bienvenida
-	await text({ message: startMessage, color: 'yellow' })
-
-	// Obtener ajustes
+	// Get settings
 	const author = await getAuthor()
 	if (!author) return
 
 	const settings: Settings = { author }
 
-	// Guardar ajustes
+	// Save settings
 	const settingsFilePath = getSettingsFilePath()
 	const folderExists = await saveFolderExists()
 	if (!folderExists) await createSaveFolder()
@@ -36,10 +30,13 @@ export async function createSettings({
 
 	const fileCreated = await settingsFileExists()
 	if (!fileCreated) {
-		await text({ message: endMessage.fail, color: 'red' })
+		await text({ message: '¡No se pudo crear el archivo de ajustes!', color: 'red' })
 		return
 	}
 
 	// Mostrar mensaje de finalización
-	await text({ message: endMessage.success, color: 'green' })
+	await text({
+		message: '¡Archivo de ajustes creado con éxito!\nYa puedes usar el CLI, pero deberás volver a ejecutarlo.',
+		color: 'green',
+	})
 }
