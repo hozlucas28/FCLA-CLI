@@ -1,5 +1,13 @@
-import { invalidReturn, validReturn } from './_utilities'
 import type { ValidationReturn } from './types'
+
+const validReturn: ValidationReturn<'valid'> = {
+	isValid: true,
+}
+
+const invalidReturn: ValidationReturn<'invalid'> = {
+	isValid: false,
+	invalidMsg: 'El campo es invalido.',
+}
 
 export function validateStr(str: string): ValidationReturn {
 	if (typeof str !== 'string') {
